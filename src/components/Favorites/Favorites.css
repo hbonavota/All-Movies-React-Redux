@@ -1,0 +1,67 @@
+.cnt {
+    padding-top: 10px;
+}
+.textFav{
+    margin-top: 50px;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgb(247, 239, 239),
+        0 0 10px rgb(240, 132, 124),
+        0 0 20px rgb(240, 165, 159),
+        0 0 40px rgb(243, 182, 178),
+        0 0 80px rgb(240, 181, 177),
+        0 0 90px rgb(240, 199, 196),
+        0 0 100px rgb(245, 200, 197),
+        0 0 140px rgb(243, 207, 205),
+        0 0 180px rgb(253, 249, 249);
+}
+
+favCtn{
+    flex-wrap: wrap;
+    display: flex;
+}
+.favList{
+    border: 3px solid;
+    background:rgba(121, 120, 120, 0.219);
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.navText{
+    color:rgb(241, 199, 199);
+}
+.navText:hover{
+    color:white;
+}
+
+.btnFav{
+    position:initial;
+    margin:5px;
+    border-radius: 30px;
+}
+.btnFav:hover{
+    color:red
+}
+.ctn{
+    border: 1px solid;
+    flex-wrap: wrap;
+    display: flex;
+
+}
+
+.containsPrev{    
+    margin: 20px;
+    width: 18rem;
+    background-color: rgb(139, 138, 143);
+    opacity: 0.8;
+    border-radius:20px;
+    justify-content: center;
+    display: flex;
+}
+.post{
+    width: 100%;
+    height: 100%;
+}
