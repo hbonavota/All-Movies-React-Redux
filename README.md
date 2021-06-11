@@ -32,7 +32,7 @@ REACT_APP_UNSPLASH_URL=www.omdbapi.com
 
 Preview
 ---
-![Buscador](./img/captura.PNG)
+![Buscador](./img/Captura.PNG)
 ![Detalle de la pelicula](./img/detail.jpg)
 ![Mensaje de confirmación](./img/capturaAlert.png)
 
