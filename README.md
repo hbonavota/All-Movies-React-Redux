@@ -30,3 +30,8 @@ directory/.env
 REACT_APP_UNSPLASH_KEY=
 REACT_APP_UNSPLASH_URL=www.omdbapi.com
 
+Preview
+![alt text](./img/Captura)
+![alt text](./img/CapturaAlert)
+![alt text](./img/detail)
+
