@@ -10,13 +10,15 @@ const initialState = {
     if (action.type === "ADD_MOVIE_FAVORITE") {
       const myStorage = window.localStorage;
       myStorage.setItem('user',JSON.stringify(state.moviesFavourites));
+      if(action.payload?.length > 0){
         swal({
           title: "¡Bien Hecho!", 
           text:"Tu pelicula se ha agregado con éxito",
           icon: "success",
           button: "OK!",
           timer: 1200
-        })
+        }) 
+      }
         return {
           ...state,
           moviesFavourites: state.moviesFavourites.concat(action.payload)
