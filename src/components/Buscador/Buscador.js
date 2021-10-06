@@ -22,24 +22,24 @@ export class Buscador extends Component {
   render() {
     const { title } = this.state;
     return (
-      <div>
-          <h1 className="textBusc">Buscador de Peliculas</h1>
+      <div className="containerBusc">
+          <h1 className="textBusc"></h1>
         <div className="buscadorCtn">
           <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
             <div className="buscador">
-              <label className="label" htmlFor="title">Película: </label>
+              <label className="label"  htmlFor="title">MOVIE: </label>
               <input
+                className="input"
                 type="text"
                 id="title"
                 autoComplete="off"
                 value={title}
                 onChange={(e) => this.handleChange(e)}
               />
-            <button type="submit">BUSCAR</button>
+            <button type="submit">SEARCH</button>
             </div>
           </form>
         </div>
-        
         <MovieList/>
       </div>
     );

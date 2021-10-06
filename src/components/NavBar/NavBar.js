@@ -1,22 +1,30 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Logo from '../../logoHenry.png'
-import './Navbar.css';
+import Logo from '../../logoFilm.png'
+/* import './Navbar.css'; */
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container'
 
 export default function NavBar() {
     return (
-        <header className="navbar">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <div>
-                <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
             </div>
-            <nav>
-                <ul className="list">
-                    <li className="list-item">
-                        <NavLink exact to="/" >Home</NavLink>
-                        <NavLink to="/favs" >Favoritas</NavLink>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+            <Container>
+                <img id="logo" src={Logo} width="25" height="25" alt="logo" />
+                <Navbar.Brand href="/">Movie Search Engine</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/favs">Favourites</Nav.Link>
+                        <Nav.Link href="/">About</Nav.Link>
+                        <Nav.Link href="/favs">Contact</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }

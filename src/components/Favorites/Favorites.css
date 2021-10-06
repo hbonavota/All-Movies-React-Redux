@@ -46,7 +46,6 @@ favCtn{
     color:red
 }
 .ctn{
-    border: 1px solid;
     flex-wrap: wrap;
     display: flex;
 
