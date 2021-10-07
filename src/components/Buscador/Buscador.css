@@ -1,7 +1,6 @@
 .containerBusc{
     justify-content: center;
     text-align:center;
-    
 }
 .buscadorCtn{
     margin-top: 50px;
@@ -39,11 +38,18 @@
     margin-left: 2px;
     border-radius:10px;
 }
-.label {
-    padding-right: 5px;
-    color:black;
-}
 .btnFav{
-    border-radius: 5px;
+/*     border-radius: 5px; */
     border: 1px;
+    display:block;
+}
+.search{
+    color:black;
+    background-color: rgba(238, 238, 238, 0.87);
+    border: none;
+}
+.search:hover {
+    border: 1px black;
+    background-color: rgba(99, 98, 100, 0.555);
+    color: rgba(230, 225, 225, 0.87)
 }

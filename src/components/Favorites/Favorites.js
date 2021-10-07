@@ -1,55 +1,70 @@
 import React, { Component } from "react";
- import { connect } from "react-redux";
-import { removeMovieFavorite, addMovieFavorite } from "../../actions/index";
- import { NavLink } from 'react-router-dom';
+import { connect } from "react-redux";
+import { removeMovieFavorite, /* addMovieFavorite */ } from "../../actions/index";
+import { NavLink } from 'react-router-dom';
 import './Favorites.css';
+import brokenheart from './brokenheart.png'
+import conectLS from '../../actions/conectLS'
+import notImg from '../../notImg.jpg'
 
-export class ConnectedList extends Component {
+export class Favorites extends Component {
 
-  componentDidMount(){
-    let storage = JSON.parse(window.localStorage.getItem('user'))
-    if(this.props.movies !== storage){
-      this.props.addStorage(storage);
+  componentDidMount() {
+    this.props.conect()
+    if (!this.props.movies) {
+      this.props.conect()
     }
   }
+
   render() {
     return (
       <div className="favCtn">
         <h1 className="textFav">Películas Favoritas</h1>
         <div className="ctn" >
-            {this.props.movies && this.props.movies.map(el =>(
-              <div>
-                <div className='favList'>
-                <button className="btnFav" onClick={() => this.props.removeMovie({title: el.Title, id: el.id})} >X </button>
-                  <NavLink className="navText"to={`/movie/${el.id}`}>{el.Title}</NavLink>
-                  <img className="post" src={el.Poster} alt="No hay imagen :/"></img>
+          {this.props.movies?.map(el => (
+            <div>
+              <div className='favList'>
+
+                <div className="btnFav">
+                  <img onClick={
+                    () => {
+                      this.props.removeMovie({ title: el.Title, id: el.id })
+                    }
+                  } className="corazon2" src={brokenheart} alt="Fav"></img>
                 </div>
-                <div className="containsPrev">
-                </div>
+                {/* <button className="btnFav" onClick={() => this.props.removeMovie({ title: el.Title, id: el.id })} >X </button> */}
+                <NavLink className="navText" to={`/movie/${el.id}`}>{el.Title}</NavLink>
               </div>
-            ))
-            }
+              <div key={el.imdbID} className="ctn">
+              <NavLink className="containsPrev" to={`/movie/${el.id}`}>
+                <img className="post" src={el.Poster === "N/A" ? notImg : el.Poster} alt="sorry, not found"></img>
+              </NavLink>
+            </div>
+            </div>
+          ))
+          }
         </div>
       </div>
     );
   }
 }
 
-function mapStateToProps(state){
-  return{
-    movies: state.moviesFavourites
+function mapStateToProps(state) {
+  return {
+    movies: state.moviesFavorites
   };
 }
 
-function mapDispatchToProps(dispatch){
-  return{
+function mapDispatchToProps(dispatch) {
+  return {
     removeMovie: movie => dispatch(removeMovieFavorite(movie)),
-    addStorage : storage => dispatch(addMovieFavorite(storage))
-  };  
+    conect: prop => dispatch(conectLS(prop))
+    /* addStorage : storage => dispatch(addMovieFavorite(storage)) */
+  };
 }
 
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ConnectedList);
+)(Favorites);

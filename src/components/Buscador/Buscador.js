@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {addMovieFavorite,getMovies} from '../../actions/index.js';
+import { addMovieFavorite, getMovies } from '../../actions/index.js';
 import MovieList from "../MovieList/MovieList.js";
 import './Buscador.css';
 
@@ -23,11 +23,9 @@ export class Buscador extends Component {
     const { title } = this.state;
     return (
       <div className="containerBusc">
-          <h1 className="textBusc"></h1>
         <div className="buscadorCtn">
           <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
             <div className="buscador">
-              <label className="label"  htmlFor="title">MOVIE: </label>
               <input
                 className="input"
                 type="text"
@@ -35,12 +33,13 @@ export class Buscador extends Component {
                 autoComplete="off"
                 value={title}
                 onChange={(e) => this.handleChange(e)}
+                placeholder="Search a movie..."
               />
-            <button type="submit">SEARCH</button>
+              <button className="search" type="submit">Search...</button>
             </div>
           </form>
         </div>
-        <MovieList/>
+        <MovieList />
       </div>
     );
   }

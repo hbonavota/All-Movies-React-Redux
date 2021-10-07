@@ -19,7 +19,7 @@ export default function NavBar() {
                     </Nav>
                     <Nav>
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/favs">Favourites</Nav.Link>
+                        <Nav.Link href="/favs">Favorites</Nav.Link>
                         <Nav.Link href="/">About</Nav.Link>
                         <Nav.Link href="/favs">Contact</Nav.Link>
                     </Nav>
