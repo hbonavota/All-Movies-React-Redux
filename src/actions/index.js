@@ -27,7 +27,7 @@ export function getMovies(titulo) {
 
 export function getMovieDetail(id){
     return function(dispatch){
-        fetch(`https://${process.env.REACT_APP_UNSPLASH_URL}/?apikey=${process.env.REACT_APP_UNSPLASH_KEY}&i=${id}`)
+        fetch(`https://${process.env.REACT_APP_APY_URL}/?apikey=${process.env.REACT_APP_APY_KEY}&i=${id}`)
         .then(response => response.json())
       .then(json => {
         dispatch({ 

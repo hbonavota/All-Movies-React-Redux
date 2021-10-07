@@ -26,14 +26,6 @@
     line-height: normal;
     position: relative;
 }
-.title span {
-    margin-left: 12px;
-    background: #C4AF3D;
-    border-radius: 5px;
-    color: #544C21;
-    font-size: 14px;
-    padding: 0px 4px;
-  }
 .description {
   bottom: 0px;
   height: 200px;
