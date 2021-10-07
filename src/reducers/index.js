@@ -51,6 +51,7 @@ const initialState = {
     }
 
     if(action.type === "GET_MOVIE_DETAIL"){
+      console.log("action.payload",action.payload)
         return{
             ...state,
             movieDetail: action.payload

@@ -27,7 +27,7 @@
 .buscador{
     justify-content: center;
     text-align:center;
-    margin: 5px;
+    margin: 2px;
 }
 .input{
     border:0;
@@ -36,11 +36,11 @@
     outline: none;
 }
 .form-container button {
-    margin-left: 20px;
+    margin-left: 2px;
     border-radius:10px;
 }
 .label {
-    padding-right: 10px;
+    padding-right: 5px;
     color:black;
 }
 .btnFav{
