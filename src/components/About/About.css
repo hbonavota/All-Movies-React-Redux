@@ -1,0 +1,10 @@
+.containerAbout{
+    justify-content:center;
+    display:flex;
+}
+.image{
+    justify-content:flex-end;
+}
+.cardAbout{
+    background: rgba(121, 120, 120, 0.219)
+}

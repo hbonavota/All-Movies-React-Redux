@@ -1,3 +1,6 @@
+/* 
+THIS COMPONENT WAS BE ADDED IN TO NAVBAR
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addMovieFavorite, getMovies } from '../../actions/index.js';
@@ -63,3 +66,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Buscador);
+ */

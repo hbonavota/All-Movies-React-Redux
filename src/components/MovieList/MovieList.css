@@ -38,6 +38,7 @@
   display: flex;
 }
 .CtnMayor {
+  margin-top: 40px;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
