@@ -11,7 +11,6 @@ export function removeMovieFavorite(payload){
     };
 }
 export function getMovies(titulo) {
-  console.log(process.env)
   return function(dispatch) {
     return fetch(`https://${process.env.REACT_APP_APY_URL}/?apikey=${process.env.REACT_APP_APY_KEY}&s=${titulo}`)
       .then(response => response.json())

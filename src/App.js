@@ -10,7 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    
       <React.Fragment>
           {/* <NavBar /> */}
           <Route path="/" component={NavBar} />
