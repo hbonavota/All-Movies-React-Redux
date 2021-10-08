@@ -7,8 +7,6 @@ const initialState = {
 };
 
 function rootReducer(state = initialState, action) {
-  console.log("action es ",action.type)
-
   if (action.type === "ADD_MOVIE_FAVORITE") {
     let itemLS = JSON.parse(window.localStorage.getItem('user'))
     if (!itemLS) {
@@ -61,15 +59,14 @@ function rootReducer(state = initialState, action) {
   }
 
   if (action.type === "GET_MOVIE_DETAIL") {
-    console.log("action.payload", action.payload)
     return {
       ...state,
       movieDetail: action.payload
 
     }
   }
+
   if (action.type === "CONECT_LS") {
-    console.log("conectLS y moviesFavorites",state.moviesFavorites)
     if (!window.localStorage.getItem("user")) {
       return {
         ...state,

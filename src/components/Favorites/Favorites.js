@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { removeMovieFavorite, /* addMovieFavorite */ } from "../../actions/index";
 import { NavLink } from 'react-router-dom';
-import Button from 'react-bootstrap/Button'
 import brokenheart from './brokenheart.png'
 import conectLS from '../../actions/conectLS'
 import notImg from '../../notImg.jpg'
@@ -22,7 +21,6 @@ export class Favorites extends Component {
       <div className="favCtn">
         <h1 className="textFav">Películas Favoritas</h1>
         <div className="ctn" >
-          {/* <Button variant="secondary" onClick={() => window.history.back()} > Go Back</Button> */}
           {this.props.movies?.map(el => (
             <div>
               <div className='favList'>

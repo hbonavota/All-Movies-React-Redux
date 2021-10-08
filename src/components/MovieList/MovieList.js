@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { addMovieFavorite } from '../../actions/index.js'
-import { NavLink, Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav'
 import './MovieList.css';
 import corazonon from './Images/corazonon.png'
