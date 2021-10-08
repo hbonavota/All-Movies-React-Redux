@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { addMovieFavorite } from '../../actions/index.js'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav'
 import './MovieList.css';
-import corazonon from './corazonon.png'
+import corazonon from './Images/corazonon.png'
 import notImg from '../../notImg.jpg'
 
 export class MovieList extends Component {
@@ -25,12 +26,18 @@ export class MovieList extends Component {
             </div>
 
             <div className="texNav">
-              <NavLink className="texNav" to={`/movie/${el.imdbID}`}>{el.Title}</NavLink>
+            <Nav.Link className="texNav" href={`/movie/${el.imdbID}`}>
+              {el.Title}
+            </Nav.Link>
+              {/* <Link className="texNav" to={`/movie/${el.imdbID}`}>{el.Title}</Link> */}
             </div>
             <div key={el.imdbID} className="ctn">
-              <NavLink className="containsPrev" to={`/movie/${el.imdbID}`}>
+              <Nav.Link className="containsPrev" href={`/movie/${el.imdbID}`}>
+              <img className="post" src={el.Poster === "N/A" ? notImg : el.Poster} alt="sorry, not found"></img>
+              </Nav.Link>
+              {/* <Link className="containsPrev" to={`/movie/${el.imdbID}`}>
                 <img className="post" src={el.Poster === "N/A" ? notImg : el.Poster} alt="sorry, not found"></img>
-              </NavLink>
+              </Link> */}
             </div>
           </div>
         ))}

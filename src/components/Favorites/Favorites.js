@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { removeMovieFavorite, /* addMovieFavorite */ } from "../../actions/index";
 import { NavLink } from 'react-router-dom';
-import './Favorites.css';
+import Button from 'react-bootstrap/Button'
 import brokenheart from './brokenheart.png'
 import conectLS from '../../actions/conectLS'
 import notImg from '../../notImg.jpg'
+import './Favorites.css';
 
 export class Favorites extends Component {
 
@@ -21,10 +22,10 @@ export class Favorites extends Component {
       <div className="favCtn">
         <h1 className="textFav">Películas Favoritas</h1>
         <div className="ctn" >
+          {/* <Button variant="secondary" onClick={() => window.history.back()} > Go Back</Button> */}
           {this.props.movies?.map(el => (
             <div>
               <div className='favList'>
-
                 <div className="btnFav">
                   <img onClick={
                     () => {
@@ -32,17 +33,17 @@ export class Favorites extends Component {
                     }
                   } className="corazon2" src={brokenheart} alt="Fav"></img>
                 </div>
-                {/* <button className="btnFav" onClick={() => this.props.removeMovie({ title: el.Title, id: el.id })} >X </button> */}
                 <NavLink className="navText" to={`/movie/${el.id}`}>{el.Title}</NavLink>
               </div>
               <div key={el.imdbID} className="ctn">
-              <NavLink className="containsPrev" to={`/movie/${el.id}`}>
-                <img className="post" src={el.Poster === "N/A" ? notImg : el.Poster} alt="sorry, not found"></img>
-              </NavLink>
-            </div>
+                <NavLink className="containsPrev" to={`/movie/${el.id}`}>
+                  <img className="post" src={el.Poster === "N/A" ? notImg : el.Poster} alt="sorry, not found"></img>
+                </NavLink>
+              </div>
             </div>
           ))
           }
+          
         </div>
       </div>
     );
@@ -59,7 +60,6 @@ function mapDispatchToProps(dispatch) {
   return {
     removeMovie: movie => dispatch(removeMovieFavorite(movie)),
     conect: prop => dispatch(conectLS(prop))
-    /* addStorage : storage => dispatch(addMovieFavorite(storage)) */
   };
 }
 
