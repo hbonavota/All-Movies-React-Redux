@@ -91,7 +91,11 @@ ___
 
 
 + HOME
-<div align="center"><img  src="./img/Captura.PNG" /> </div>
+<div align="center"><img  src="./img/Captura2.PNG" /> </div>
+
++ Favorites
+
+<div align="center"><img  src="./img/Favorites.PNG" /> </div>
 
 + Movie Detail
 
@@ -99,7 +103,14 @@ ___
 
 + Alert
 
-<div align="center"><img  src="./img/capturaAlert.png" /> </div>
+<div align="center"><img  src="./img/capturaAlert2.png" /> </div>
 
++ About
+
+<div align="center"><img  src="./img/About.PNG" /> </div>
+
++ Contact
+
+<div align="center"><img  src="./img/Contact.PNG" /> </div>
 
 
