@@ -28,10 +28,10 @@ export class NavBar extends Component {
         this.setState({ Title: event.target.value });
         this.props.getMovies(this.state.Title);
     }
-    handleSubmit(event) {
+/*     handleSubmit(event) {
         event.preventDefault();
         this.props.getMovies(this.state.Title);
-    }
+    } */
 
     render() {
         const { title } = this.state;
